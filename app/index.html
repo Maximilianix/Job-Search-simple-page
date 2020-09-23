@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Some example content">
+    <link rel="icon" type="image/png" href="./src/images/favicon.png" />
+    <link rel="stylesheet" href="src/scss/app.scss">
+    <title>ZipRecruiter Search Page</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="#">
+                <img src="./src/images/logo.png" alt="Site Logo">
+            </a>
+        </div>
+
+        <div class="nav-link-mobile">
+            <a href="#">Sign In</a>
+        </div>
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="menu-icon__line"></span>
+        </label>
+        <ul class="nav-links">
+            <li class="nav-link">
+                <a href="#">Jobs</a>
+            </li>
+            <li class="nav-link">
+                <a href="#">Salaries</a>
+            </li>
+            <li class="nav-link">
+                <a href="#">Messages</a>
+            </li>
+            <li class="nav-link">
+                <a href="#">Profile</a>
+            </li>
+            <li class="nav-link">
+                <a href="#">Post a Job</a>
+            </li>
+            <li class="nav-link nav-link__hide">
+                <a href="#">Sign In</a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="job_search">
+        <form id="search-form">
+            <label for="search">Search job title or keyword</label>
+            <input type="text" class="form-control" placeholder="Search job title or keyword" id="search">
+            <label for="location">City, state or ZIP</label>
+            <input type="text" class="form-control" placeholder="City, state or ZIP" id="location">
+            <label for="joblocation">Title and City, state or ZIP</label>
+            <input type="text" class="form-control" placeholder="Title and City, state or ZIP" id="joblocation">
+            <button class="btn-submit">Search jobs</button>
+        </form>
+    </section>
+
+    <main class="main-content">
+        <div class="loading-element">
+            <img src="./src/images/loader.gif" alt="Loader">
+        </div>
+        <div class="result-container"></div>
+        <div class="modal-container"></div>
+        <div class="no-results">Start your search</div>
+    </main>
+
+
+    <script src="src/js/app.js"></script>
+
+</body>
+
+</html>

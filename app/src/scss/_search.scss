@@ -1,0 +1,96 @@
+.job_search{
+    position: fixed;
+    display: flex;
+    background: #f1f3f4;
+    height: 65px;
+    margin-top: 65px;
+    width: 100vw;
+    padding: 0 10vw;
+    align-items: center;
+    z-index: 1;
+    box-shadow:0 3px 6px rgba(0,0,0,0.1);
+    #search-form{
+        label{
+            position: absolute !important;
+            clip: rect(1px,1px,1px,1px);
+            padding: 0 !important;
+            border: 0 !important;
+            height: 1px !important;
+            width: 1px !important;
+            overflow: hidden;
+        }
+        .form-control{
+            font-size: 15px;
+            line-height: 20px;
+            padding: 7px 4px 7px 32px;
+            border-radius: 6px;
+            height: 36px;
+            border: 1px solid #d8dbdc;
+            width: 288px;
+            background: #fff;
+            &:focus{
+                outline: 0 !important;
+                border: 1px solid #277f6a !important;
+                box-shadow: 0 0 0 1px #277f6a !important;
+            }
+        }
+        #joblocation{
+            display: none;
+        }
+        .btn-submit{
+            transition: background-color .1s linear,border-color .1s linear;
+            border-radius: 2em;
+            outline: 0;
+            color: #fff;
+            background: #277f6a none;
+            border: 1px solid #277f6a;
+            font-weight: 700;
+            padding: 5px 15px 5px 15px;
+            line-height: 19px;
+            cursor: pointer;
+            &:hover{
+                background-color: #005e4d;
+                border-color: #005e4d;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1023px){
+    .job_search {
+        padding: 0 2vw;
+    }
+}
+@media screen and (max-width:767px){
+    .job_search{
+        background: #fff;
+        #search-form{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            #joblocation{
+                display: block;
+                width: 90vw;
+                background: #F6F7F8;
+                border-radius: 2em;
+            }
+            #search.form-control,#location.form-control{
+                display: none;
+            }
+            .btn-submit{
+                visibility: hidden;
+                position: relative;
+                &:after{
+                    content: "Filter";
+                    visibility: visible;
+                    color: #0e75e2;
+                    display: block;
+                    font-weight: 400;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        } 
+    }
+}
